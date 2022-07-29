@@ -1,13 +1,10 @@
-<div class="search-buttons">
-  <div class="search">
-    <input class="your-location" type="text" value="Get Your Location" (click)="show()" />
-  </div> 
+
   <div class="search">
     <form #form="ngForm" (submit)="onSubmit()">
-      OR <input class="search-city" type="text" placeholder="Search City" name="city" [(ngModel)]="cityName" />
+      <input class="search-city" type="text" placeholder="Search City" name="city" [(ngModel)]="cityName" />
     </form>
   </div>
-</div>
+
 
 <div class="container" *ngIf="weather">
   <div class="upper-data">

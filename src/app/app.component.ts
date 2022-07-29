@@ -23,7 +23,7 @@ export class AppComponent {
   dayOrNight?: string;
   
   ngOnInit() {
-    
+    this.getLocation() 
   }
 
   onSubmit() {
@@ -31,9 +31,6 @@ export class AppComponent {
     this.cityName = '';
   }
 
-  show(){
-    this.getLocation();
-  }
   getLocation() {
     if ('geolocation' in navigator) {
       navigator.geolocation.watchPosition((success) => {
